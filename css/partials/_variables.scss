@@ -1,17 +1,16 @@
-$orange: #FFA500;
-$grey: #333;
-$blue: #1485CC;
-$lgrey: #ECE6DD;
+// Professional. Blues/Navy/Gold.
 
-$border: solid #333 3px;
+$sky: rgb(202, 228, 219); // #CAE4DB
+$honey: rgb(220, 174, 129); // #DCAE81
+$cerulean: rgb(0, 48, 63); // #00303F
+$cerulean-pale: rgba(0, 48, 63, 0.6); // #00303F
+$mist: rgb(122, 157, 150); // #7A9D96
+$mist-pale: rgba(122, 157, 150, 0.5); // #7A9D96
 
-$dancing: 'Dancing Script', cursive;
-$crimson: "Crimson+Text", serif;
-$raleway: 'Raleway', sans-serif;
+// $ : "", serif;
+$Montserrat: 'Montserrat', sans-serif;
 
-$mountain: "../img/header_Desk.png";
-$coffee: "../img/coffee_Desk.jpg";
-
-$break-tablet_land: 1024px;
-$break-tablet: 768px;
 $break-mobile: 480px;
+$break-tablet: 768px;
+$break-tablet_land: 1024px;
+$break-laptop: 1600px;

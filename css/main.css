@@ -1,118 +1,168 @@
 html {
-  font-family: "Raleway", sans-serif;
-  padding: 0px;
-  margin: 0px;
-  background-size: cover; }
+  font-family: "Montserrat", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: rgba(122, 157, 150, 0.5); }
 
 body {
-  margin: auto;
-  font-size: 0.8rem;
-  max-width: 964px; }
-  @media only screen and (max-width: 1024px) {
+  margin: 0 auto;
+  width: 100%; }
+  @media only screen and (min-width: 480px) and (max-width: 768px) {
     body {
-      max-width: 100%; } }
-
-nav {
-  background: #333;
-  display: block;
-  color: white;
-  height: 50px;
-  width: 100%;
-  max-width: 964px;
-  padding: 15px 0 0 0;
-  position: fixed; }
-
-nav ul {
-  padding: 0 0 0 25%;
-  margin: -5px 0 0 0; }
-  nav ul li {
-    width: 4rem;
-    display: inline-block;
-    text-align: center;
-    padding: 0 5px;
-    margin: 10px; }
-  @media only screen and (max-width: 1024px) {
-    nav ul {
-      padding: 0 0 0 12rem; } }
-
-.btn {
-  background-color: #333;
-  color: white;
-  border-radius: 20px;
-  padding: 10px 20px; }
-  .btn:hover {
-    background-color: #FFA500;
-    color: #333;
-    font-weight: bold; }
+      width: 100%; } }
+  @media only screen and (min-width: 768px) and (max-width: 1024px) {
+    body {
+      width: 100%; } }
+  @media only screen and (min-width: 1024px) and (max-width: 1600px) {
+    body {
+      width: 960px; } }
+  @media only screen and (min-width: 1600px) {
+    body {
+      width: 960px; } }
 
 header {
-  margin: auto;
-  padding: 220px 0 0 0;
-  text-transform: uppercase;
-  background: url("../img/header_Desk.png") no-repeat center; }
-  header p {
-    margin: 150px 0 0 0;
-    padding: 0 0 5px 5px;
-    color: white; }
+  background: url("../img/mobile/dog-360.png") no-repeat center center;
+  background-size: cover;
+  height: 300px;
+  text-align: center;
+  margin: 3.6rem auto 0 auto;
+  width: 100%;
+  z-index: -1;
+  font-size: 0.5rem;
+  color: #00303f; }
+  header h1 {
+    padding-top: 16rem;
+    font-size: 1.5rem; }
+  @media only screen and (min-width: 480px) and (max-width: 768px) {
+    header {
+      background: url("../img/tablet/dog-768.png") no-repeat center center;
+      background-size: cover;
+      height: 384px; } }
+  @media only screen and (min-width: 768px) and (max-width: 1024px) {
+    header {
+      background: url("../img/tablet_land/768x512.png") no-repeat center center;
+      background-size: cover;
+      height: 512px; } }
+  @media only screen and (min-width: 1024px) {
+    header {
+      background: url("../img/laptop/dog-960.png") no-repeat center center;
+      background-size: cover;
+      height: 540px;
+      max-width: 960px; }
+      header h1 {
+        padding-top: 440px; } }
 
-.container {
-  margin: 0.25rem 0;
-  padding: 1rem;
-  font-family: "Crimson+Text", serif; }
-  .container .tablet_land {
-    display: none; }
-  .container .tablet {
-    display: none; }
-  .container .mobile {
-    display: none; }
-  @media only screen and (max-width: 1024px) {
-    .container .desktop {
-      display: none; }
-    .container .tablet_land {
-      display: block; } }
-  @media only screen and (max-width: 768px) {
-    .container .desktop {
-      display: none; }
-    .container .tablet_land {
-      display: none; }
-    .container .tablet {
-      display: block; }
-      .container .tablet img {
-        width: 100%; } }
-  @media only screen and (max-width: 480px) {
-    .container .desktop {
-      display: none; }
-    .container .mobile {
-      display: block; } }
+#about, #find {
+  display: none; }
 
-.core aside {
-  display: inline-block;
-  margin: 5px 0 5px 8px; }
+#home, #about, #find {
+  margin: 0 auto;
+  text-align: center; }
+  #home #wide, #about #wide, #find #wide {
+    margin: 0 auto;
+    width: 100%; }
+    @media only screen and (min-width: 768px) {
+      #home #wide, #about #wide, #find #wide {
+        width: 80%; } }
+  #home #left, #about #left, #find #left {
+    margin: 0 auto;
+    width: 100%; }
+    @media only screen and (min-width: 768px) {
+      #home #left, #about #left, #find #left {
+        width: 50%;
+        float: left; } }
+  #home #right, #about #right, #find #right {
+    margin: 0 auto;
+    width: 95%; }
+    #home #right table, #about #right table, #find #right table {
+      text-align: center;
+      margin: 0 auto;
+      border: 1px solid #00303f; }
+      #home #right table td, #about #right table td, #find #right table td {
+        padding: 0 2rem; }
+    @media only screen and (min-width: 768px) {
+      #home #right, #about #right, #find #right {
+        width: 50%;
+        float: right; } }
 
-.container_ft {
-  position: absolute;
-  bottom: 0;
-  width: 100vw;
-  max-width: 964px;
-  background-color: black;
-  color: white; }
-
-footer ul {
-  margin: 0;
-  padding: 10px 0;
-  text-align: right; }
-  footer ul li {
-    text-align: center;
-    width: 60px;
+nav {
+  top: 0;
+  position: fixed;
+  margin: 0 auto;
+  text-align: center;
+  width: 100%;
+  padding: 4px 0;
+  background-color: rgba(122, 157, 150, 0.5); }
+  nav button {
+    border-radius: 1rem;
     display: inline-block;
-    padding: 0 10px; }
-    footer ul li a {
-      color: white;
-      text-decoration: none; }
-    footer ul li a:visited {
-      color: white; }
-    footer ul li a:hover {
-      color: #1485CC;
-      font-weight: bold; }
+    width: 30%;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    padding: 1rem;
+    border: 2px solid #cae4db;
+    outline: none;
+    background-color: rgba(0, 48, 63, 0.6);
+    color: #cae4db;
+    transition: 0.4s; }
+    nav button:hover {
+      background-color: #00303f; }
+    nav button:active {
+      background-color: #cae4db; }
+  @media only screen and (min-width: 480px) and (max-width: 768px) {
+    nav {
+      font-size: 0.25rem;
+      font-weight: normal; } }
+  @media only screen and (min-width: 768px) and (max-width: 1024px) {
+    nav {
+      font-size: 1rem;
+      width: 100%; } }
+  @media only screen and (min-width: 1024px) and (max-width: 1600px) {
+    nav {
+      max-width: 960px; } }
+  @media only screen and (min-width: 1600px) {
+    nav {
+      font-size: 1.25rem;
+      max-width: 960px; } }
+
+footer {
+  display: none;
+  z-index: 2;
+  position: fixed;
+  margin: 0 auto;
+  text-align: center;
+  margin: 0 auto;
+  width: 100%;
+  position: relative;
+  padding: 4px 0; }
+  footer button {
+    border-radius: 1rem;
+    display: inline-block;
+    width: 30%;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    padding: 1rem;
+    border: 2px solid #cae4db;
+    outline: none;
+    background-color: rgba(0, 48, 63, 0.6);
+    color: #cae4db;
+    transition: 0.4s; }
+    footer button:hover {
+      background-color: #00303f; }
+    footer button:active {
+      background-color: #00303f; }
+    @media only screen and (min-width: 480px) and (max-width: 768px) {
+      footer button {
+        font-size: 0.25rem;
+        font-weight: normal; } }
+    @media only screen and (min-width: 768px) and (max-width: 1024px) {
+      footer button {
+        font-size: 1rem;
+        width: 31%; } }
+    @media only screen and (min-width: 1600px) {
+      footer button {
+        font-size: 1.25rem; } }
 
 /*# sourceMappingURL=main.css.map */

@@ -1,165 +1,219 @@
 @import "partials/_variables.scss";
 
 html {
-   font-family: $raleway;
-   padding: 0px;
-   margin: 0px;
-   background-size: cover;
+    font-family: $Montserrat;
+    margin: 0;
+    padding: 0;
+    background-color: $mist-pale;
 }
 
 body {
-    margin: auto;
-    font-size: 0.8rem;
-    max-width: 964px;
-    @media only screen and (max-width: $break-tablet_land) {
-      max-width: 100%;
+    margin: 0 auto;
+    width: 100%;
+
+    @media only screen and (min-width: $break-mobile) and (max-width: $break-tablet) {
+      width: 100%;
     }
+
+    @media only screen and (min-width: $break-tablet) and (max-width: $break-tablet_land) {
+      width: 100%;
+    }
+
+    @media only screen and (min-width: $break-tablet_land) and (max-width: $break-laptop) {
+      width: 960px;
+    }
+
+    @media only screen and (min-width: $break-laptop) {
+      width: 960px;
+    }    
+
+}
+
+
+header {
+  background: url("../img/mobile/dog-360.png") no-repeat center center;
+  background-size: cover;
+  height: 300px;
+  text-align: center;
+  margin: 3.6rem auto 0 auto;
+  width: 100%;
+  z-index: -1;
+  font-size: 0.5rem;
+  color: $cerulean;
+    h1 {
+      padding-top: 16rem;
+      font-size: 1.5rem;
+    }
+
+    @media only screen and (min-width: $break-mobile) and (max-width: $break-tablet) {
+      background: url("../img/tablet/dog-768.png") no-repeat center center;
+      background-size: cover;
+      height: 384px;
+    }
+
+    @media only screen and (min-width: $break-tablet) and (max-width: $break-tablet_land) {
+      background: url("../img/tablet_land/768x512.png") no-repeat center center;
+      background-size: cover;
+      height: 512px;
+    }
+
+    @media only screen and (min-width: $break-tablet_land) {
+      background: url("../img/laptop/dog-960.png") no-repeat center center;
+      background-size: cover;
+      height: 540px;
+      max-width: 960px;
+        h1 {
+          padding-top: 440px;
+        }
+    }
+
+}
+
+#about, #find {
+  display: none;
+}
+
+#home, #about, #find {
+  margin: 0 auto;
+  text-align: center;
+  #wide {
+    margin: 0 auto;
+    width: 100%;
+      @media only screen and (min-width: $break-tablet) {
+        width: 80%;
+      }
+  }
+  #left {
+    margin: 0 auto;
+    width: 100%;
+
+    @media only screen and (min-width: $break-tablet) {
+      width: 50%;
+      float: left;
+    }
+  }
+  #right {
+    margin: 0 auto;
+    width: 95%;
+      table {
+        text-align: center;
+        margin: 0 auto;
+        border: 1px solid $cerulean;
+          td {
+            padding: 0 2rem;
+          }
+      }
+
+      @media only screen and (min-width: $break-tablet) {
+        width: 50%;
+        float: right;
+  }
+
+}
+
 }
 
 nav {
+    //z-index: 2;
+    top: 0;
+    position: fixed;
+    margin: 0 auto;
+    text-align: center;
+    width: 100%;
+    padding: 4px 0;
+    background-color: $mist-pale;
+      button {
+        border-radius: 1rem;
+        display: inline-block;
+        width: 30%;
+        font-size: 0.8rem;
+        text-transform: uppercase;
+        font-weight: 700;
+        padding: 1rem;
+        border: 2px solid $sky;
+        outline: none;
+        background-color: $cerulean-pale;
+        color: $sky;
+        transition: 0.4s;
+          &:hover {
+            background-color: $cerulean;
+          }
+          &:active {
+            background-color: $sky;
+          }
 
-   background: $grey;
-   display: block;
-   color: white;
-   height: 50px;
-   width: 100%;
-   max-width: 964px;
-   padding: 15px 0 0 0;
-   position: fixed;
+      }
+
+      @media only screen and (min-width: $break-mobile) and (max-width: $break-tablet) {
+          font-size: 0.25rem;
+          font-weight: normal;
+
+        }
+
+        @media only screen and (min-width: $break-tablet) and (max-width: $break-tablet_land) {
+          font-size: 1rem;
+          width: 100%;
+        }
+
+        @media only screen and (min-width: $break-tablet_land) and (max-width: $break-laptop) {
+          max-width: 960px;
+        }
+
+        @media only screen and (min-width: $break-laptop) {
+          font-size: 1.25rem;
+          max-width: 960px;
+      
+        }
 }
 
-nav ul {
-   padding: 0 0 0 25%;
-   margin: -5px 0 0 0;
-    li {
-    width: 4rem;
-    display: inline-block;
-    text-align:center;
-    padding: 0 5px;
-    margin: 10px;
-  }
-  @media only screen and (max-width: $break-tablet_land) {
-    padding: 0 0 0 12rem;
-  }
-}
+footer {
+    display: none;
+    z-index: 2;
+    position: fixed;
+    margin: 0 auto;
+    text-align: center;
+    margin: 0 auto;
+    width: 100%;
+    position: relative;
+    padding: 4px 0;
+      button {
+        border-radius: 1rem;
+        display: inline-block;
+        width: 30%;
+        font-size: 0.7rem;
+        text-transform: uppercase;
+        font-weight: 700;
+        padding: 1rem;
+        border: 2px solid $sky;
+        outline: none;
+        background-color: $cerulean-pale;
+        color: $sky;
+        transition: 0.4s;
+          &:hover {
+            background-color: $cerulean;
+          }
+          &:active {
+            background-color: $cerulean;
+          }
 
+        @media only screen and (min-width: $break-mobile) and (max-width: $break-tablet) {
+          font-size: 0.25rem;
+          font-weight: normal;
 
-.btn {
-   background-color: $grey;
-   color: white;
-   border-radius: 20px;
-   padding: 10px 20px;
-    &:hover {
-   background-color: $orange;
-   color: $grey;
-   font-weight: bold;
- }
+        }
 
-}
+        @media only screen and (min-width: $break-tablet) and (max-width: $break-tablet_land) {
+          font-size: 1rem;
+          width: 31%;
+        }
 
-header {
-    margin: auto;
-    padding: 220px 0 0 0;
-    text-transform: uppercase;
-    background: url($mountain) no-repeat center;
-      p {
-        margin: 150px 0 0 0;
-        padding: 0 0 5px 5px;
-        color: white;
+        @media only screen and (min-width: $break-tablet_land) and (max-width: $break-laptop) {
+          
+        }
+
+        @media only screen and (min-width: $break-laptop) {
+          font-size: 1.25rem;
+      
+        }
       }
 }
-
-
-.container {
-   margin: 0.25rem 0;
-   padding: 1rem;
-   font-family: $crimson;
-   .tablet_land {
-    display: none;
-   }
-   .tablet {
-    display: none;
-   }
-   .mobile {
-    display: none;
-   }
-   @media only screen and (max-width: $break-tablet_land) {
-    
-    .desktop {
-      display: none;
-    }
-    .tablet_land {
-      
-      display: block;
-      
-    }
-
-  }
-    @media only screen and (max-width: $break-tablet) {
-      
-    .desktop {
-      display: none;
-    }
-    .tablet_land {
-    display: none;
-   }
-    .tablet {
-      display: block;
-      img {
-        width: 100%;
-      }
-    }
-  }
-    @media only screen and (max-width: $break-mobile) {
-    .desktop {
-      display: none;
-    }
-    .mobile {
-      display: block;
-    }
-   }
-}
-
-
-.core aside {
-    display: inline-block;
-    margin: 5px 0 5px 8px;
-}
-
-
-.container_ft {
-   position: absolute;
-   bottom: 0;
-   width: 100vw;
-   max-width: 964px;
-   background-color: black;
-   color: white;
-
-}
-
-footer ul {
-   margin: 0;
-   padding: 10px 0;
-   text-align: right;
-    li {
-      text-align: center;
-      width: 60px;
-      display: inline-block;
-      padding: 0 10px;
-
-        a {
-          color: white;
-          text-decoration: none;
-        }
-        
-        a:visited {
-        color: white;
-        }
-        
-        a:hover {
-        color: $blue;
-        font-weight: bold;
-    }
-  }
-}
-
